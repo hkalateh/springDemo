@@ -3,8 +3,12 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean class="ir.kalateh.springdemo.BaseballCoach" id="baseballCoach"/>
+    <bean class="ir.kalateh.springdemo.BaseballCoach" id="baseballCoach">
+        <constructor-arg ref="fortuneService"/>
+    </bean>
 
     <bean class="ir.kalateh.springdemo.TrackCoach" id="trackCoach"/>
+
+    <bean class="ir.kalateh.springdemo.HappyFortuneService" id="fortuneService"/>
 
 </beans>
