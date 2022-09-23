@@ -11,7 +11,7 @@ public class SpringDemoApplication {
 		
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		SpringApplication.run(SpringDemoApplication.class, args);
-		Coach theCoach = (Coach) context.getBean("baseballCoach");
+		Coach theCoach = context.getBean("cricketCoach", Coach.class);
 		System.out.println(theCoach.getDailyWorkout());
 		System.out.println(theCoach.getDailyFortune());
 		context.close();
