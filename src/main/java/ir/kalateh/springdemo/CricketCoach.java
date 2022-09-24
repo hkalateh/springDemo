@@ -4,10 +4,11 @@ public class CricketCoach implements Coach {
 	
 	private FortuneService fortuneService;
 	private String emailAddress;
+	private String team;
 	
 	@Override
 	public String getDailyWorkout() {
-		return "practice fast bowling for 15 minutes, if you have any question please deal with us with email: " + emailAddress;
+		return "practice fast bowling for 15 minutes, if you have any question from team : " + team + " please deal with us with email: " + emailAddress;
 	}
 	
 	@Override
@@ -21,5 +22,9 @@ public class CricketCoach implements Coach {
 	
 	public void setEmailAddress(String emailAddress) {
 		this.emailAddress = emailAddress;
+	}
+	
+	public void setTeam(String team) {
+		this.team = team;
 	}
 }
