@@ -13,6 +13,7 @@
 
     <bean class="ir.kalateh.springdemo.CricketCoach" id="cricketCoach">
         <property name="fortuneService" ref="fortuneService"/>
+        <property name="emailAddress" value="h.1234@gmail.com"/>
     </bean>
 
 </beans>
