@@ -14,7 +14,7 @@
 
     <bean class="ir.kalateh.springdemo.HappyFortuneService" id="fortuneService"/>
 
-    <bean class="ir.kalateh.springdemo.CricketCoach" id="cricketCoach">
+    <bean class="ir.kalateh.springdemo.CricketCoach" id="cricketCoach" scope="prototype" init-method="myInitMethod" destroy-method="myDestroyMethod">
         <property name="fortuneService" ref="fortuneService"/>
         <property name="emailAddress" value="h.cricket@gmail.com"/>
         <property name="team" value="${cricket.team}"/>
