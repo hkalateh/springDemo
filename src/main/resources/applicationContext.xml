@@ -5,19 +5,17 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
     <context:property-placeholder location="sport.properties"/>
+<!--    <context:component-scan base-package="ir.kalateh.springdemo"/>-->
 
-    <bean class="ir.kalateh.springdemo.BaseballCoach" id="baseballCoach">
+    <!--<bean class="ir.kalateh.springdemo.BaseballCoach" id="baseballCoach">
         <constructor-arg ref="fortuneService"/>
     </bean>
 
-    <bean class="ir.kalateh.springdemo.TrackCoach" id="trackCoach"/>
-
-    <bean class="ir.kalateh.springdemo.HappyFortuneService" id="fortuneService"/>
-
-    <bean class="ir.kalateh.springdemo.CricketCoach" id="cricketCoach" scope="prototype" init-method="myInitMethod" destroy-method="myDestroyMethod">
+    <bean class="ir.kalateh.springdemo.CricketCoach" id="cricketCoach" scope="prototype" init-method="myInitMethod"
+          destroy-method="myDestroyMethod">
         <property name="fortuneService" ref="fortuneService"/>
         <property name="emailAddress" value="h.cricket@gmail.com"/>
         <property name="team" value="${cricket.team}"/>
-    </bean>
+    </bean>-->
 
 </beans>
