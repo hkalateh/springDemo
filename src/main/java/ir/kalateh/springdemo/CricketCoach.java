@@ -1,5 +1,6 @@
 package ir.kalateh.springdemo;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -12,7 +13,7 @@ public class CricketCoach implements Coach {
 	@Value("${cricket.team}")
 	private String team;
 
-	public CricketCoach(FortuneService fortuneService) {
+	public CricketCoach(@Qualifier("randomFortuneService") FortuneService fortuneService) {
 		this.fortuneService = fortuneService;
 	}
 

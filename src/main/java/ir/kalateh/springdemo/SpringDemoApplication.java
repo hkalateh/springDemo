@@ -17,6 +17,10 @@ public class SpringDemoApplication {
 		Coach theCoach = context.getBean("cricketCoach", Coach.class);
 		System.out.println(theCoach.getDailyWorkout());
 		System.out.println(theCoach.getDailyFortune());
+		
+		Coach coach = context.getBean("trackCoach", Coach.class);
+		System.out.println(coach.getDailyWorkout());
+		System.out.println(coach.getDailyFortune());
 //		context.close();
 		
 	}
