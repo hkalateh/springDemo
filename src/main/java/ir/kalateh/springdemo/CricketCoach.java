@@ -1,6 +1,5 @@
 package ir.kalateh.springdemo;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -10,7 +9,7 @@ public class CricketCoach implements Coach {
 	private final FortuneService fortuneService;
 	@Value("h.cricket@gmail.com")
 	private String emailAddress;
-	@Value("cricket")
+	@Value("${cricket.team}")
 	private String team;
 
 	public CricketCoach(FortuneService fortuneService) {
